@@ -5,9 +5,8 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#" [routerLink]="['/']">Table</a>
+      <a mat-list-item href="#" [routerLink]="['/form']">Form</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,6 +22,6 @@
       <span>powerful-schematics</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <app-demo-table></app-demo-table>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
